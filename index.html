@@ -1,12 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Calculadora Básica</h1>
+        <div class="lado-esquerdo">
+            <input id="num1" type = "number"/>
+            <input id="num2" type="number"/>
+            <button onclick="calc('+')">+</button>
+            <button onclick="calc('-')">-</button>
+            <button onclick="calc('*')">*</button>
+            <button onclick="calc('/')">/</button>
+            <div id="history">
+               
+            </div>
+          
+        </div>
+        <div class="lado-direito">
+
+        </div>
+    </div>
+    <script>
+        function calc(op)
+        {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        
+
+            switch (op)
+            {
+                case '+': var result = num1 + num2
+                var histor
+                break;
+
+                case '-': result = num1 - num2;
+                break;
+
+                case '*': result = num1 * num2;
+                break;
+
+                case '/': result = num1 / num2;
+                break;
+            }
+
+        console.log(result);
+
+        document.getElementById("history").innerHTML += num1 +op+ num2 + "=" +result;
+        }
+
+
+        
+    </script>
 </body>
 </html>
