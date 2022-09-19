@@ -8,22 +8,30 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <h1>Calculadora Básica</h1>
     <div class="container">
-        <h1>Calculadora Básica</h1>
         <div class="lado-esquerdo">
+            <div class="visor">
             <input id="num1" type = "number"/>
             <input id="num2" type="number"/>
+        </div>
+        <div class="botao">
+            <div class="botao-colum1">
             <button onclick="calc('+')">+</button>
             <button onclick="calc('-')">-</button>
+        </div>
+        <div class="botao-colum2">
             <button onclick="calc('*')">*</button>
             <button onclick="calc('/')">/</button>
-            <div id="history">
-               
-            </div>
-          
+        </div>
+        </div>
         </div>
         <div class="lado-direito">
-
+            <h2>Histórico</h2>
+            <div id="history">
+            
+            </div>
+            <button id="limpar" onclick="limpar()">limpar</button>
         </div>
     </div>
     <script>
@@ -51,8 +59,17 @@
 
         console.log(result);
 
-        document.getElementById("history").innerHTML += num1 +op+ num2 + "=" +result;
+        document.getElementById("history").innerHTML += num1 + op + num2 + "=" + result + "<br>"
         }
+
+        function limpar()
+        {
+            document.getElementById("history").innerText = "";
+
+        }
+
+      
+        
 
 
         
