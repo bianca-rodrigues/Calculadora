@@ -10,8 +10,6 @@ body {
   width: 600px;
   height: 500px;
   flex-direction: row;
-  border: solid 3px;
-  border-radius: 5%;
 }
 
 .lado-esquerdo {
@@ -19,6 +17,8 @@ body {
   height: 100%;
   flex-wrap: wrap;
   flex-direction: row;
+  border: solid black 3px;
+  border-radius: 5%;
 }
 
 .visor {
@@ -34,12 +34,62 @@ input {
   border-radius: 15px;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+    -webkit-appearance: none;
+     margin: 0;
+}
+
 button {
   width: 100px;
   height: 100px;
   font-size: 50px;
   margin: 15px;
   border-radius: 15px;
+  cursor: pointer;
+  color: #322a2a
+}
+
+.red {
+    background-color: #eb5f57;
+}
+
+.red:hover {
+    background-color: #ee2b21;
+}
+
+.verde {
+    background-color: #95cdb2;
+}
+
+.verde:hover {
+    background-color: #49a87a;
+}
+
+.roxo {
+    background-color: #91a5df;
+}
+
+.roxo:hover {
+    background-color: #4d6bc5;
+}
+
+.laranja {
+    background-color:  #f88163;
+}
+
+.laranja:hover {
+    background-color:  #fa633e;
+}
+
+.limpar {
+    background-color: #3e9bda;
+    color: white;
+}
+
+.limpar:hover {
+    background-color: #1f83c5;
 }
 
 .container-botao {
@@ -61,13 +111,12 @@ button {
   width: 40%;
   flex-direction: column;
   height: 100%;
-  border-left: solid black 3px;
-  justify-content: center;
+  align-items: center;
 }
 
 #history {
   display: -webkit-box;
-  -webkit-line-clamp: 15;
+  -webkit-line-clamp: 18;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

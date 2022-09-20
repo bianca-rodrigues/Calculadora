@@ -10,62 +10,60 @@
 <body>
     <h1>Calculadora Básica</h1>
     <div class="container">
-        <div class="lado-esquerdo">
+        <div class="lado-esquerdo" style="background-color: #e9edf0">
             <div class="visor">
-            <input id="num1" type = "number" placeholder="Digite o primeiro número"/>
-            <input id="num2" type="number" placeholder="Digite o segundo número"/>
-        </div>
-        <div class="container-botao">
-            <div class="botao-colum1">
-            <button onclick="calc('+')">+</button>
-            <button onclick="calc('-')">-</button>
-        </div>
-        <div class="botao-colum1">
-            <button onclick="calc('*')">*</button>
-            <button onclick="calc('/')">/</button>
-        </div>
-        </div>
+                <input id="num1" type = "number" placeholder="Digite o primeiro número"/>
+                <input id="num2" type="number" placeholder="Digite o segundo número"/>
+            </div>
+            <div class="container-botao">
+                <div class="botao-colum1">
+                    <button class="red" onclick="calc('+')">+</button>
+                    <button class="verde" onclick="calc('-')">-</button>
+                </div>
+                <div class="botao-colum1">
+                    <button class="roxo" onclick="calc('*')">*</button>
+                    <button class="laranja" onclick="calc('/')">/</button>
+                </div>
+            </div>
         </div>
         <div class="lado-direito">
             <h2>Histórico</h2>
             <div id="history">
             </div>
-                <button id="limpar" onclick="limpar()">limpar</button>
+                <button class="limpar" id="limpar" onclick="limpar()">limpar</button>
         </div>
     </div>
     <script>
         function calc(op)
         {
-        var num1 = parseFloat(document.getElementById("num1").value);
-        var num2 = parseFloat(document.getElementById("num2").value);
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
         
 
-            switch (op)
-            {
-                case '+': var result = num1 + num2
-                var histor
-                break;
+                switch (op)
+                {
+                    case '+': result = num1 + num2;
+                    break;
 
-                case '-': result = num1 - num2;
-                break;
+                    case '-': result = num1 - num2;
+                    break;
 
-                case '*': result = num1 * num2;
-                break;
+                    case '*': result = num1 * num2;
+                    break;
 
-                case '/': result = num1 / num2;
-                break;
-            }
+                    case '/': result = num1 / num2;
+                    break;
+                }
 
-        console.log(result);
+            console.log(result);
 
-        document.getElementById("history").innerHTML += num1 + op + num2 + "=" + result + "<br>"
+            document.getElementById("history").innerHTML += num1 + op + num2 + " = " + result + "<br>"
         }
 
         function limpar()
         {
             document.getElementById("history").innerText = "";
-
-        }
+        }    
     </script>
 </body>
 </html>
