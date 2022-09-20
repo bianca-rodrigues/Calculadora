@@ -1,83 +1,82 @@
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
-    display: flex;
-    width: 600px;
-    height: 500px;
-    flex-direction: row;
-    border: solid 3px;
-    border-radius: 5%;
+.container {
+  display: flex;
+  width: 600px;
+  height: 500px;
+  flex-direction: row;
+  border: solid 3px;
+  border-radius: 5%;
 }
 
-.lado-esquerdo{
-    width: 60%;
-    height: 100%;
-    flex-wrap: wrap;
-    flex-direction: row;
+.lado-esquerdo {
+  width: 60%;
+  height: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-.visor{
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-    padding: 15px;
-    margin-top: 20px;
+.visor {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  padding: 15px;
+  margin-top: 20px;
 }
-input{
-    height: 100px;
-    margin: 2px;
-    border-radius: 15px;
-}
-
-button{
-    width: 100px;
-    height: 100px;
-    font-size: 50px;
-    margin: 15px;
-    border-radius: 15px;
+input {
+  height: 100px;
+  margin: 2px;
+  border-radius: 15px;
 }
 
-.container-botao{
-    display: flex;
-    flex-wrap: wrap;
-    width: 345px;
-    height: 100px;
-    padding: 10px;
-    justify-content: center;
+button {
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  margin: 15px;
+  border-radius: 15px;
 }
 
-.botao-colum1{
-    flex-direction: row;
-    padding: 10px;   
+.container-botao {
+  display: flex;
+  flex-wrap: wrap;
+  width: 345px;
+  height: 100px;
+  padding: 10px;
+  justify-content: center;
 }
 
-.lado-direito{
-    display: flex;
-    width: 40%;
-    height: 100%;
-    border-left: solid black 3px;
-    justify-content: center;
+.botao-colum1 {
+  flex-direction: row;
+  padding: 10px;
 }
 
-
-
-#history{
-    display: -webkit-box;
-    -webkit-line-clamp: 15;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.lado-direito {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  height: 100%;
+  border-left: solid black 3px;
+  justify-content: center;
 }
 
-#limpar{
-    width: 150px;
-    height: 30px;
-    font-size: 15px;
-    position: fixed;
-    bottom: 400px;   
+#history {
+  display: -webkit-box;
+  -webkit-line-clamp: 15;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#limpar {
+  width: 150px;
+  height: 30px;
+  font-size: 15px;
+  position: fixed;
+  bottom: 400px;
 }
