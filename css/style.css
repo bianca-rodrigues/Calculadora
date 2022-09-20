@@ -2,20 +2,21 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container{
     display: flex;
-    width: 500px;
+    width: 600px;
     height: 500px;
     flex-direction: row;
     border: solid 0.5px;
+    border-radius: 5%;
 }
 
 .lado-esquerdo{
-    width: 65%;
+    width: 60%;
     height: 100%;
-    border: solid 0.5px;
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -37,12 +38,13 @@ button{
     height: 100px;
     font-size: 50px;
     margin: 15px;
+    border-radius: gray 7%;
 }
 
-.botao{
+.container-botao{
     display: flex;
     flex-wrap: wrap;
-    width: 300px;
+    width: 345px;
     height: 100px;
     padding: 10px;
     justify-content: center;
@@ -54,22 +56,27 @@ button{
 }
 
 .lado-direito{
-    width: 35%;
+    display: flex;
+    width: 40%;
     height: 100%;
-    border: solid 0.5px;
+    border-left: solid black 0.5px;
+    justify-content: center;
 }
 
-h2{
-    margin-left: 40px;
-}
+
 
 #history{
-    width: 50px;
-    margin-left: 60px;
+    display: -webkit-box;
+    -webkit-line-clamp: 15;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #limpar{
-    height: 15px;
+    width: 150px;
+    height: 30px;
     font-size: 15px;
-    width: 15px;
+    position: fixed;
+    bottom: 400px;   
 }
